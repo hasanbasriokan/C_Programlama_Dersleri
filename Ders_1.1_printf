@@ -1,0 +1,109 @@
+Başlangıçta her şeyi bir anda öğrenemeyiz. Ondan ilk aşamada ezberlememiz gereken yerler var. Bunlar;
+
+int main() {
+   
+   return 0;
+}
+
+bu şekildedir. Buradaki tüm kodları başlangıçta yazmamız gerekir. Bizim kendi kodlarımızı yazacağımız
+kısım ise, return 0; dan önce, main de bulunan süslü parentezden sonradır. 
+
+Yazacağımız ilk kod, programcılığın en temel kodu olan Merhaba Dunya yazdırmaktır.
+
+#include <stdio.h>
+
+int main() {
+
+   printf("Merhaba Dunya!");
+   
+   return 0;
+}
+
+printf("Merhaba Dunya!"); yazdığımız zaman, ekrana Merhaba Dunya! yazısını bastıracaktır. Printf içerisine yazılan
+her şey olduğu gibi ekrana basılır.  
+Printf ifadesi ingilizce olduğu için programlamaya yeni başlayanların aklında kalmayabilir. Onu da, printer yani yazıcılardan aklımızda tutabiliriz.
+printf ifadesi bir nevi yazıcı işlevi görmekte, içerisine yacılan ifadeyi ekrana basmaktadır.
+
+Printf hazır bir fonksiyondur. Fonskiyon ne demek ilerleyen derslerde değineceğiz.
+Ama şimdilik fonksiyon kullanılırken, yani printf ifadesi kullanılırken, şu şekilde kullanılmalıdır.
+printf("");
+Her iki köşeli tırnağın içerisine istenilen şey yazılacakken, noktalı virgülle de satırı sonlandırmamız gerekir.
+Aslında c programlamada neredeyse her satırı noktalı virgül (;) ile sonlandırmamız gerekir. Çünkü makina yani bilgisayarlar bizim ne yazmak
+istediğimizi anlayamazlar. Onların hafızası yoktur. Bu yüzden her şeyi bizim ifade etmemiz gerekir. Biz de burada aslında noktalı virgül
+koyarak, komutu bitirdiğimizi ifade ediyoruz.
+
+Bir başka printf ile örnek yapalım.
+
+int main() {
+
+   printf("Benim adım Hasan");
+   
+   return 0;
+}
+
+
+Bir de kimi özel ifadelerimiz vardır. Bunları göstermek gerekirse;
+
+\n 	yeni satır
+\r 	satırbaşı (printer)
+\" 	"
+\v 	düşey tab
+
+bunlardır. Hepsini burada ifade etmedik. Daha fazla sayıda bulunmaktadır. Ancak bunlar şimdilik iş görecektir. Dİğerlerine ihtiyaç duydukça 
+internetten ulaşılabilir. Ne kadar sık kullanırsanız ezberlersiniz. O yüzden şuan bunları ezberlemeye çalışmayın.
+
+
+int main() {
+
+   printf("Benim adım Hasan
+   
+   
+   Benim adım Basri");
+   
+   return 0;
+}
+
+çıktımız,
+Benim adım HasanBenim adım Basri
+
+bu kodu yazdıktan sonra enter tuşuna bassam bile, çıktısı karşıma geldiğinde aşağı satıra geçmeyecektir. Bunun sebebi c programlama da
+yukarıda bahsettiğimiz gibi bir akıl bulunmamasındandır. Makinalara bizim tanıtmamız gerekir. Onu da \n ifadesi ile tanıtırız. 
+O halde,aşağı satıra geçebilmek \n kullanalım.
+
+int main() {
+
+   printf("Benim adım Hasan\nBenim adım Basri");
+   
+   return 0;
+}
+görüldüğü üzere çıktımız,
+Benim adım Hasan
+Benim adım Basri
+olarak çıkmıştır.
+
+Diğer durmu inceleyecek olursak, ekrana tırnak işareti (") bastırmak isteyebiliriz. Yani şu şekilde,
+
+Hasan Hoca: "C programlama ogreniyorsun" dedi.
+cümlesini ekrana bastırdığımız zaman metin içerisinde tırnak kullanmamız gerekir. Bu haliyle deneyelim.
+
+int main() {
+
+   printf("Hasan Hoca: "C programlama ogreniyorsun" dedi.");
+   
+   return 0;
+}
+
+Bu haliyle programımız hata verdi. Çünkü tırnak ifadeleri özel ifadelerdir. Yani printf yazdıktan sonra
+tırnak içerisinde bulunan kısımlar ekrana bastıracaktır. O zaman cümle içerisinde kullandığımız tırnaklarla,
+printf in sınırlarını belirleyen tırnaklar karışır. Bunun önüne geçmek için,
+
+int main() {
+
+   printf("Hasan Hoca: \"C programlama ogreniyorsun\" dedi.");
+   
+   return 0;
+}
+Ters slaşları koyunca çıktımız tam da istediğimiz gibi oldu.
+
+Hasan Hoca: "C programlama ogreniyorsun" dedi.
+
